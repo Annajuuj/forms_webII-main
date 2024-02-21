@@ -50,13 +50,10 @@
 
       async function enviarDados(event) {
         event.preventDefault();
-        // Pega os valores dos campos do formulário
         const nome = document.getElementById("nome").value;
         const telefone = document.getElementById("telefone").value;
         const email = document.getElementById("email").value;
         const descricao = document.getElementById("descricao").value;
-
-        // Cria uma variável com os dados do formulário
         const dados = {
           nome: nome,
           telefone: telefone,
@@ -67,8 +64,7 @@
         console.log(JSON.stringify(dados));
 
         try {
-          // Faz uma requisição para a sua API
-          await fetch("http://localhost:3000/formulario", {
+          await fetch("https://meu-primeiro-banco-de-dados-4312.onrender.com/formulario", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
